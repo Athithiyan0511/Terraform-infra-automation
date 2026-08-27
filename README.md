@@ -2,29 +2,23 @@
 
 Hey, devs! Don’t worry, you're at the right place! 😉
 
-If you’ve ever had to create multiple EC2 instances through the AWS dashboard, you know it can be a time-consuming process. But there’s a smarter way: **Infrastructure as Code (IaC)** using Terraform!
-
-With Terraform, we can automate the creation and management of AWS resources, including EC2 instances, making our infrastructure repeatable and manageable with just a few commands. Let me walk you through the setup!
+If you’ve ever had to create multiple EC2 instances through the AWS dashboard, you know it can be a time-consuming process. But there’s a smarter way: Infrastructure as Code (IaC) using Terraform! With Terraform, we can automate the creation and management of AWS resources, including EC2 instances, making our infrastructure repeatable and manageable with just a few commands. Let me walk you through the setup!
 
 ## 🛠 Prerequisites
 
 Before diving into Terraform, make sure you have:
 
-### 1. AWS CLI Configured
-
-The AWS CLI should be set up and configured on your machine with the necessary permissions.
+1. **AWS CLI Configured**: The AWS CLI should be set up and configured on your machine with the necessary permissions.
 
 ```bash
-aws configure # configuring AWS account
+aws configure # configuring aws account
 ```
 
-Enter your access key and secret access key when prompted, and you’re good to go!
+Enter your access keys and secret access keys when prompted, and you’re good to go!
 
 ![AWS CLI Configuration](./Images/img1.png)
 
-### 2. Terraform Installed
-
-Ensure Terraform is installed.
+2. **Terraform Installed**: Ensure Terraform is installed.
 
 [Terraform Documentation](https://developer.hashicorp.com/terraform/install)
 
@@ -86,21 +80,19 @@ output "ec2_public_ips" {
 }
 ```
 
-![Terraform Configuration](./Images/img2.png)
-
 ## 🔍 Explanation of the Code
 
 **Provider Block:** This block specifies the AWS provider details, including the region. Make sure to adjust the region if you’re working outside of `ap-south-1`.
 
 **Resource Block:** Here, we define the `aws_instance` resource. The `count` parameter lets us create multiple EC2 instances—in this case, 2 EC2 instances.
 
-**Tags:** We use tags to help identify and manage instances. The name will appear as `terraform-instance-1`, `terraform-instance-2`, and so on.
+**Tags:** We use tags to help identify instances. The name will appear as `"example-instance-1"`, `"example-instance-2"`, and so on.
 
 **Output Block:** This block outputs the public IPs of our newly created EC2 instances, which can be useful for further automation or SSH access.
 
 ## 🚀 Running the Terraform Code
 
-With the configuration complete, let’s initialize and apply it. Here’s the sequence of commands you need to run.
+With the configuration complete, let’s initialize and apply it. Here’s the sequence of commands you need to run:
 
 ### Initialize Terraform
 
@@ -162,7 +154,7 @@ Wait, wait, wait...
 
 Created hundreds of instances just for fun and don't know how to terminate them?
 
-Don't do it manually, haha! 😄
+Don't just do it manually, haha!!
 
 Don’t worry! Just use:
 
@@ -172,8 +164,6 @@ terraform destroy
 
 This command will remove all resources defined in your configuration. Thank me later! 😉
 
-## 💡 Bonus Tip
+**Bonus tip**
 
-You can choose an Amazon Machine Image by changing the AMI ID in the Terraform configuration.
-
-Make sure the AMI ID you use is available in the AWS region you're deploying to.
+You can choose an Amazon Machine Image by changing the AMI ID in the code.
