@@ -121,6 +121,8 @@ Shows what Terraform will do without making any actual changes. This is a great 
 terraform plan
 ```
 ![Terraform Plan Output](./Images/img5.png)
+
+
 ![Terraform Apply](./Images/img6.png)
 
 ### Apply the Changes
@@ -133,13 +135,16 @@ terraform apply
 
 ![Terraform Apply Confirmation](./Images/img7.png)
 
+
 During the apply step, Terraform will prompt you to confirm. Type `yes` to proceed.
 
 ![Terraform Apply Result](./Images/img8.png)
 
+
 ![Terraform Apply Output](./Images/img9.png)
 
-![AWS EC2 Instances](./Images/img10.png)
+
+
 
 ## 🎉 Verify the Results
 
