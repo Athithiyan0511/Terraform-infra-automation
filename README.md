@@ -79,6 +79,7 @@ output "ec2_public_ips" {
   value = aws_instance.my_ec2_instance[*].public_ip  # Outputs the public IP addresses as a list
 }
 ```
+![Terraform Validate](./Images/img3.png)
 
 ## 🔍 Explanation of the Code
 
@@ -110,7 +111,7 @@ Checks for syntax errors or misconfigurations.
 terraform validate
 ```
 
-![Terraform Validate](./Images/img3.png)
+![Terraform Plan](./Images/img4.png)
 
 ### Plan the Deployment
 
@@ -119,10 +120,8 @@ Shows what Terraform will do without making any actual changes. This is a great 
 ```bash
 terraform plan
 ```
-
-![Terraform Plan](./Images/img4.png)
-
 ![Terraform Plan Output](./Images/img5.png)
+![Terraform Apply](./Images/img6.png)
 
 ### Apply the Changes
 
@@ -132,15 +131,15 @@ Creates the resources defined in `main.tf`.
 terraform apply
 ```
 
-![Terraform Apply](./Images/img6.png)
+![Terraform Apply Confirmation](./Images/img7.png)
 
 During the apply step, Terraform will prompt you to confirm. Type `yes` to proceed.
-
-![Terraform Apply Confirmation](./Images/img7.png)
 
 ![Terraform Apply Result](./Images/img8.png)
 
 ![Terraform Apply Output](./Images/img9.png)
+
+![AWS EC2 Instances](./Images/img10.png)
 
 ## 🎉 Verify the Results
 
