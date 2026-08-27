@@ -79,6 +79,8 @@ output "ec2_public_ips" {
   value = aws_instance.my_ec2_instance[*].public_ip  # Outputs the public IP addresses as a list
 }
 ```
+![Terraform Validate](./Images/img2.png)
+
 ![Terraform Validate](./Images/img3.png)
 
 ## 🔍 Explanation of the Code
