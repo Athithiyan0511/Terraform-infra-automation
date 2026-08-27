@@ -125,7 +125,7 @@ terraform plan
 ![Terraform Plan Output](./Images/img5.png)
 
 
-![Terraform Apply](./Images/img6.png)
+
 
 ### Apply the Changes
 
